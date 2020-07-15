@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-    background-color: #000;
+    background-color: #202428;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -32,14 +32,14 @@ a:hover {
 #background {
     width: 100vw;
     height: 100vh;
-    background-color: #000;
+    background-color:#202428;
     position: fixed;
     z-index: -100;
-    opacity: 0.4;
+    opacity: 1;
 }
 
 .section {
-    background-color: #ffffff33;
+    background-color: #202428aa;
     margin: 2rem auto;
     padding: 1rem 2rem;
     border-radius: 25px;
@@ -84,7 +84,7 @@ a:hover {
 }
 
 .footer {
-    background-color: #ffffff11;
+    background-color: #202428aa;
     margin-top: 3rem;
     font-size: 12px;
     padding: 0.6rem;
@@ -108,17 +108,8 @@ a:hover {
 }
 
 .subtitle {
-    font-size: 1.7em;
+    font-size: 1.3em;
     font-weight: 100;
-}
-
-.subtitle .word {
-    transition: all 0.25s;
-    text-shadow: -1px 0 1px rgb(30,242,241) , 1px 0 1px rgb(246,5,10);
-}
-
-.subtitle .word:hover {
-    color: rgb(51, 51, 51);
 }
 
 .section-title {
