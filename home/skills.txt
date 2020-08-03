@@ -1,0 +1,14 @@
+Hello World, I'm just another developer on the big, big internet with a few peculiarities:
+
+1. I know quite a few languages, ranging from Python, JavaScript, PHP
+   to Golang, Rust, C/C++, Java (and derivatives like Kotlin) to Assembly to Minecraft Redstone Logic.
+
+2. Although I regularly use and specialize in (Golang|Python|C/C++|PHP).
+
+3. For fun, I code. Yes, money too, but fun foremost. I quite enjoy programming.
+
+4. Not strictly relevant, but I love participating in CTFs (TL;DR hacking competitions)!
+   One day, I wish to participate in DEFCON :D
+
+5. I LOVE managing servers! I own some dedicated servers to play around and learn networking and stuff.
+   As you can guess, I mostly self host everything, including this site, blog and even the comment server!

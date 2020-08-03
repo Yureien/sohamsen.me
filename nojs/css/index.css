@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    background-color: #202428;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #aaa;
+}
+
+.link {
+    border: 1px solid white;
+    padding: 0 2px;
+}
+
+.link:hover {
+    border: 1px solid white;
+    color: #000;
+    background-color: #fff;
+    padding: 0 2px;
+}
+
+.section {
+    background-color: #202428aa;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.gradient-1 {
+    box-shadow: -2px 0 1px #00f, 2px 0 1px #f00;
+    background-image: linear-gradient(90deg, #00f3, #f003);
+}
+
+.gradient-2 {
+    box-shadow: -2px 0 1px #02aab0, 2px 0 1px #00cdac;
+    background-image: linear-gradient(90deg, #02aab033, #00cdac33);
+}
+
+.gradient-3 {
+    box-shadow: -2px 0 1px #c33764, 2px 0 1px #1d2671;
+    background-image: linear-gradient(90deg, #c3376433, #1d267133);
+}
+
+.header {
+    width: 60%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.header .logo {
+    fill: #fff;
+    height: 32px;
+    margin: 0 10px;
+    transition: ease-in-out 0.6s;
+}
+
+.header .logo:hover {    
+    transform: rotate(360deg);
+}
+
+.body {
+    width: 72%;
+}
+
+.footer {
+    background-color: #202428aa;
+    margin-top: 3rem;
+    font-size: 12px;
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-family: "Lato", monospace;
+    text-transform: uppercase;
+    text-overflow: clip;
+    text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10);
+    transition: all 0.25s;
+}
+
+.title:hover {
+    color: rgb(51, 51, 51);
+	transition: all 0.3s;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+.section-title {
+    font-size: 1.5em;
+}
+
+.section-title::before {
+    content: "//";
+    margin-right: 10px;
+    margin-left: 5px;
+}

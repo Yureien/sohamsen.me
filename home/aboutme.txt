@@ -1,0 +1,26 @@
+==============================================================
+  #####                                  #####                
+ #     #  ####  #    #   ##   #    #    #     # ###### #    # 
+ #       #    # #    #  #  #  ##  ##    #       #      ##   # 
+  #####  #    # ###### #    # # ## #     #####  #####  # #  # 
+       # #    # #    # ###### #    #          # #      #  # # 
+ #     # #    # #    # #    # #    #    #     # #      #   ## 
+  #####   ####  #    # #    # #    #     #####  ###### #    # 
+                                                              
+                      Soham Sen | ソハムセン                   
+           Another developer on the world wide web            
+==============================================================
+
+Welcome to my terminal! Enjoy your stay. Type 'help' without the quotes to get started.
+
+If you have no idea what a terminal is, or don't want to use this terminal,
+you can visit <a href="https://sohamsen.me/nojs/" target="_blank">my non-JavaScript site</a>!
+
+Quick links:
+<a href="https://github.com/FadedCoder/" target="_blank">GitHub</a>    <a href="https://www.linkedin.com/in/soham-sen-9a613a159/" target="_blank">LinkedIn</a>  <a href="mailto:contact@sohamsen.me" target="_blank">E-mail</a>
+<a href="https://t.me/NotRandomGhost" target="_blank">Telegram</a>  <a href="https://steamcommunity.com/id/one_random_ghost/" target="_blank">Steam</a>     <a href="https://blog.sohamsen.me/" target="_blank">Blog</a>
+
+Quick commands:
+<a href="JavaScript:exec_command('help')">help</a>
+<a href="JavaScript:exec_command('cat skills.txt')">cat skills.txt</a>
+<a href="JavaScript:exec_command('cat hobbies.txt')">cat hobbies.txt</a>

@@ -1,0 +1,11 @@
+This site is completely open-source, feel free to use this to make your site!
+
+Source code at: <a href="https://github.com/FadedCoder/sohamsen.me">Github.com/FadedCoder/sohamsen.me</a>.
+
+Some features are still pending, such as:
+1. Cycle through command log (which is preferably stored in localstorage?) with arrow keys.
+2. Tab auto-completition.
+3. More commands?
+4. Maybe a text editor that stores to localstorage :D
+5. Quick commands stop working after scrolling due to autofocus. Needs fix.
+6. Word wrap needs fix too.
