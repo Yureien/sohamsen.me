@@ -17,6 +17,7 @@ var cmd_help = new Map([
     ["cat", "Command: cat <file name>\nExample: cat email.txt\nRead and display a file on the screen. A list of files can be found using the command 'ls'."],
     ["cd", "Command: cd <link name>\nExample: cd linkedin\nGo to a link. A list of links can be found using the command 'ls'."],
     ["ls", "Command: ls\nList all the links and files available."],
+    ["nowplaying", "Command: nowplaying\nShow the song I'm currently listening to."],
     ["clear", "Command: clear\nClear the terminal."]
 ]);
 
@@ -173,6 +174,17 @@ register_cmd("cat", function (cmd) {
     else {
         block_log(`cat: ${parameters[0]}: No such file! Do 'ls' for a list of files available.`);
     }
+
+    if (parameters[0] === "aboutme.txt") {
+        fetch("https://splaying.sohamsen.workers.dev/np/?uid=f4d46cc927d3cd6a203359693f0439d1ceab6da7ae884cb656a8589d65c91aea")
+            .then(resp => resp.json())
+            .then(data => {
+                if (data.spotify_running !== true) return;
+                if (data.error !== undefined) return;
+                const d = data.item;
+                block_log(`I am currently listening to <a href="${d.external_urls.spotify}">${d.name}</a> by <a href="${d.artists[0].external_urls.spotify}">${d.artists[0].name}</a>.`);
+            });
+    }
 });
 
 register_cmd("cd", function (cmd) {
@@ -210,6 +222,19 @@ register_cmd("ls", function (cmd) {
     });
 
     block_log(ls_txt);
+});
+
+register_cmd("nowplaying", function(cmd) {
+    fetch("https://splaying.sohamsen.workers.dev/np/?uid=f4d46cc927d3cd6a203359693f0439d1ceab6da7ae884cb656a8589d65c91aea")
+    .then(resp => resp.json())
+    .then(data => {
+        if (data.spotify_running !== true || data.error !== undefined) {
+            block_log("I am currently not listening to any song!");
+            return;
+        };
+        const d = data.item;
+        block_log(`I am currently listening to <a href="${d.external_urls.spotify}">${d.name}</a> by <a href="${d.artists[0].external_urls.spotify}">${d.artists[0].name}</a>.`);
+    });
 });
 
 
