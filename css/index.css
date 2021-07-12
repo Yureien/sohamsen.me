@@ -1,75 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
 body {
-    padding: 0;
+    background-color: #1f1b24;
+    color: #fff;
     margin: 0;
-    background-color: #000;
-    padding-top: 10px;
+    padding: 0;
+    font-family: "Lato", sans-serif;
 }
 
-@media screen and (min-width:767px), screen and (min-device-width:767px) {
-    body {
-        padding-left: 20px;
-        padding-right: 20px;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #aaa;
+}
+
+.link {
+    border: 1px solid white;
+    padding: 0 2px;
+    transition: 0.25s;
+}
+
+.link:hover {
+    border: 1px solid white;
+    color: black;
+    background-color: white;
+    padding: 0 2px;
+}
+
+.dark .link {
+    border: 1px solid black;
+    padding: 0 2px;
+    transition: 0.25s;
+}
+
+.dark .link:hover {
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    padding: 0 2px;
+}
+
+.dark {
+    color: black;
+}
+
+.section {
+    background-color: #202428aa;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.gradient-1 {
+    box-shadow: -2px 0 1px #00f, 2px 0 1px #f00;
+    background: linear-gradient(90deg, #00f3, #f003);
+}
+
+.gradient-2 {
+    box-shadow: -2px 0 1px #0cebeb, 2px 0 1px #29ffc6;
+    background: linear-gradient(90deg, #0cebeb, #20e3b2, #29ffc6);
+}
+
+.gradient-3 {
+    box-shadow: -2px 0 1px #22c1c3, 2px 0 1px #fdbb2d;
+    background: linear-gradient(90deg, #22c1c3, #fdbb2d);
+}
+
+.header {
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.header .logo {
+    position: relative;
+    height: 60vh;
+}
+
+.header .logo>div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    background: linear-gradient(45deg, #22c1c3, #fdbb2d);
+    border-radius: 50px;
+    padding: 0.4em 0.6em;
+    box-shadow: 0 0 20px #000;
+    transition: ease-in-out 0.2s;
+}
+
+.header .logo>div:hover {
+    box-shadow: 0 0 50px #000;
+}
+
+.header .logo>div.shadow {
+    color: transparent;
+    text-shadow: -3px 3px 10px #223dc3, 3px -3px 10px #fff52e;
+}
+
+.header .logo>div.text {
+    color: #0000000f;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@media only screen and (max-width: 768px) {
+    .header .logo>div {
+        font-size: 3rem;
+        border-radius: 20px;
+        -webkit-text-stroke: 1px #000;
     }
 }
 
-#wrapper {
-    vertical-align: bottom;
+.header .links {
+    text-align: center;
+    font-size: 1em;
+}
+
+.header .links img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    filter: drop-shadow(0px 0px 3px #000);
+    transition: ease-in-out 0.2s;
+}
+
+.header .links img:hover {
+    transform: scale(1.4);
+    filter: drop-shadow(0px 0px 7px #000);
+}
+
+.header .misc {
+    margin-top: 2em;
+}
+
+.scrolldown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 3em;
+}
+
+.scrolldown>.chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+
+.scrolldown>.chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+
+.scrolldown>.chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+
+.scrolldown>.chevron:before, .scrolldown>.chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
     height: 100%;
+    width: 51%;
+    background: #fff;
 }
 
-.log {
-    padding-left: 10px;
-    padding-right: 10px;
+.scrolldown>.chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
 }
 
-.log p {
-    color: #00e676;
-    font-family: 'Source Code Pro', monospace;
-    margin: 0;
-    padding: 5px 0;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    /* Instead use this non-standard one: */
-    word-break: break-word;
-    /* Adds a hyphen where the word breaks, if supported (No Blink) */
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
+.scrolldown>.chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
 }
 
-.log p>a {
-    color: #00e676;
+.scrolldown>.text {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
 }
 
-.log p>a:hover {
-    color: #87ffc5;
+@keyframes move {
+    25% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
 }
 
-#input {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
+@keyframes pulse {
+    to {
+        opacity: 1;
+    }
 }
 
-#input p {
-    color: #00e676;
-    display: inline-block;
-    font-family: 'Source Code Pro', monospace;
-    padding-right: .15em;
-    margin: 0;
+.body {
+    width: 72%;
 }
 
-#input input {
-    width: 85%;
-    display: inline-block;
+.footer {
+    background-color: #202428aa;
+    margin-top: 3rem;
+    font-size: 12px;
+    padding: 0.6rem;
+    text-align: center;
 }
 
-input[type="command"] {
-    background-color: black;
-    border: 0;
-    color: #00e676;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 16px;
-    outline: 0;
+.title {
+    font-size: 3em;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-family: "Lato", monospace;
+    text-transform: uppercase;
+    text-overflow: clip;
+    text-shadow: -3px 0 1px rgb(30, 242, 241), 3px 0 1px rgb(246, 5, 10);
+    transition: all 0.25s;
+}
+
+.title:hover {
+    color: rgb(51, 51, 51);
+    transition: all 0.3s;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+.section-title {
+    font-size: 1.5em;
+}
+
+.section-title::before {
+    content: "//";
+    margin-right: 10px;
+    margin-left: 5px;
 }

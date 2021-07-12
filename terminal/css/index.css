@@ -1,0 +1,75 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    padding-top: 10px;
+}
+
+@media screen and (min-width:767px), screen and (min-device-width:767px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+#wrapper {
+    vertical-align: bottom;
+    height: 100%;
+}
+
+.log {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.log p {
+    color: #00e676;
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 5px 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.log p>a {
+    color: #00e676;
+}
+
+.log p>a:hover {
+    color: #87ffc5;
+}
+
+#input {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+#input p {
+    color: #00e676;
+    display: inline-block;
+    font-family: 'Source Code Pro', monospace;
+    padding-right: .15em;
+    margin: 0;
+}
+
+#input input {
+    width: 85%;
+    display: inline-block;
+}
+
+input[type="command"] {
+    background-color: black;
+    border: 0;
+    color: #00e676;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    outline: 0;
+}

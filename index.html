@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <!--
     You don't have to reverse engineer this site! Source code available at https://github.com/FadedCoder/sohamsen.me :)
@@ -8,34 +8,106 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="css/index.css">
+    <meta name="description"
+        content="I am Soham Sen, yet another developer on the world wide web. Loves to code, hack and make stuff." />
 
     <title>SohamSen.Me</title>
+
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div id="logger">
-        <div id="wrapper">
+    <div class="header">
+        <div class="logo">
+            <div class="shadow">SohamSen.me</div>
+            <div class="text">SohamSen.me</div>
+        </div>
+        <div class="links">
+            <a href="https://github.com/FadedCoder"><img class="logo" src="img/github.svg" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/soham-sen-9a613a159/"><img class="logo" src="img/linkedin.svg"
+                    alt="LinkedIn"></a>
+            <a href="https://steamcommunity.com/id/one_random_ghost/"><img class="logo" src="img/steam.svg"
+                    alt="Steam"></a>
+            <a href="https://t.me/NotRandomGhost"><img class="logo" src="img/telegram.svg" alt="Telegram"></a>
+            <a href="mailto:contact@sohamsen.me"><img class="logo" src="img/envelope.svg" alt="E-Mail"></a>
+            <!--<a><img class="logo" src="img/discord.svg" alt="Discord"></a>-->
+            <a href="https://blog.sohamsen.me/"><img class="logo" src="img/blog.svg" alt="Blog"></a>
+        </div>
+        <div class="misc">
+            <h3><a href="/terminal">Want to use a terminal instead?</a></h3>
+        </div>
+        <div class="scrolldown-wrapper">
+            <div class="scrolldown">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <span class="text">Scroll down</span>
+            </div>
         </div>
     </div>
-    <div id="input">
-        <p id="input_title"></p>
-        <input id="input_source" type="command" autocomplete="off" autocorrect="off" autocapitalize="off"
-            spellcheck="false" autofocus>
+
+    <div class="section body gradient-1">
+        <h3 class="section-title">About me in 50 words</h3>
+        <ul id="about-me-list">
+            <li>If the header wasn't clear enough, my name is <b>Soham Sen</b>.</li>
+            <li>I'm an undergrad at <a href="http://www.iitkgp.ac.in/" class="link">Indian Institute of Technology,
+                    Kharagpur</a></li>
+            <li>There, I am a member of <a href="https://kossiitkgp.org/" class="link">Kharagpur Open Source Society</a>
+            </li>
+            <li>I like to code stuff, both for fun and profit</li>
+            <li>I also like to play with servers, and deploy and automate stuff (what the cool kids call "devops"
+                nowadays)</li>
+        </ul>
     </div>
 
-    <script src="js/index.js"></script>
+    <div class="section body gradient-2 dark">
+        <h3 class="section-title">I wanna know more!</h3>
+        <ul>
+            <li>I like to wear a black hoodie, get a green terminal and bash the keyboard keys. That is, I like to
+                pretend I am a hacker. More accurately, I participate in cybersecurity competitions (CTFs).</li>
+            <li>I love receiving and transmitting radio waves. Like listening to weather satellites transmitting a
+                picture. Or creating my own LTE basestation.</li>
+            <li>Sometimes I tinker with electronics. And build a robot or two. Or automate something IRL.</li>
+            <li>I love space. Not the blank but the cosmos. My childhood dream was/is to become an astronaut. I like to
+                participate in astronomy competitions and gaze at the universe with a telescope.
+            </li>
+            <li>I watch anime, and have seen quite a lot. Also read mangas, and both English and Japanese novels.</li>
+            <li>Check out my <a href="https://blog.sohamsen.me/" class="link">blog</a>. There, I sometimes document the
+                stuff I am
+                doing.</li>
+        </ul>
+    </div>
 
-    <noscript>
-        <style>
-            .body {
-                display: none;
-            }
-        </style>
-        JS is disabled. Redirecting to <a href="nojs/">nojs.html</a>.
-        <meta http-equiv="refresh" content="0.0;url=nojs/index.html">
-    </noscript>
+    <div class="section body gradient-3 dark">
+        <h3 class="section-title">Projects worth mentioning</h3>
+        <p>
+            I don't really get the time to work on new projects nowadays, but here are some I made in the past:
+        </p>
+        <ul>
+            <li><a href="https://pinocchiobot.xyz" class="link">Pinocchio</a>: A Discord bot (in 5000+ servers, last I
+                checked) aimed at anime lovers</li>
+            <li><a href="https://github.com/FadedCoder/YTSwag" class="link">YTSwag</a>: A chrome extension designed to
+                make Youtube Music better and more usable. Adds lyrics, PIP mode, themes and more</li>
+            <li><a href="https://github.com/FadedCoder/SPlaying" class="link">SPlaying</a>: A simple worker on
+                Cloudflare that fetches songs a user is playing, if any. Being used in this site!</li>
+            <li><a href="https://github.com/FadedCoder/nginx-mime-magic-module"
+                    class="link">nginx-mime-magic-module</a>: An nginx module to automatically set the MIME type of a
+                file from its contents</li>
+        </ul>
+    </div>
+
+    <footer class="footer">
+        This website was made without CSS frameworks, without gigabytes of content and a tiny bit of optional JS.<br>
+        So yes, it should run on a DSL connection and will also load on esoteric/hipster browsers like mothra, links,
+        lynx, or eww.<br>
+        Not that I can understand why people would use that or have a DSL connection in
+        &lt;insert&nbsp;year&gt;.<br><br>
+        Site Version: 3.0 | <a href="https://github.com/FadedCoder/sohamsen.me" class="link">Source Code</a><br>
+        Icons taken from <a href="https://fontawesome.com/" class="link">Font Awesome</a> | <a
+            href="https://fontawesome.com/license" class="link">License</a>
+    </footer>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>
