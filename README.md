@@ -2,4 +2,4 @@
 
 My site :)
 
-Current version: 1.0
+Current version: 3.0
