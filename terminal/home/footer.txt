@@ -1,6 +1,6 @@
 This site is completely open-source, feel free to use this to make your site!
 
-Source code at: <a href="https://github.com/FadedCoder/sohamsen.me">Github.com/FadedCoder/sohamsen.me</a>.
+Source code at: <a href="https://github.com/Yureien/sohamsen.me">Github.com/FadedCoder/sohamsen.me</a>.
 
 Some features are still pending, such as:
 1. Cycle through command log (which is preferably stored in localstorage?) with arrow keys.
