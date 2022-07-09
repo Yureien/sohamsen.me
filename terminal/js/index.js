@@ -5,7 +5,7 @@ var home_dir = "home/";
 // Hardcoded files and links for better performance.
 var ls_files = ["aboutme.txt", "skills.txt", "hobbies.txt", "email.txt", "footer.txt"];
 var links = new Map([
-    ["GitHub", "https://github.com/FadedCoder/"],
+    ["GitHub", "https://github.com/Yureien/"],
     ["LinkedIn", "https://www.linkedin.com/in/soham-sen-9a613a159/"],
     ["Steam", "https://steamcommunity.com/id/one_random_ghost/"],
     ["Telegram", "https://t.me/NotRandomGhost"],
