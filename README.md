@@ -1,5 +1,7 @@
 # sohamsen.me
 
-My site :)
+My site, made by myself for ~~myself~~ everyone!
 
-Current version: 3.0
+Current version: 4.0
+
+GitHub mirror is hosted at: https://github.com/Yureien/sohamsen.me
