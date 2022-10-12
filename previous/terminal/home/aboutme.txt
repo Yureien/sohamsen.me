@@ -14,7 +14,7 @@
 Welcome to my terminal! Enjoy your stay. Type 'help' without the quotes to get started.
 
 If you have no idea what a terminal is, or don't want to use this terminal,
-you can visit <a href="https://sohamsen.me/nojs/" target="_blank">my non-JavaScript site</a>!
+you can visit <a href="https://sohamsen.me/" target="_blank">my non-JavaScript site</a>!
 
 Quick links:
 <a href="https://github.com/Yureien/" target="_blank">GitHub</a>    <a href="https://www.linkedin.com/in/soham-sen-9a613a159/" target="_blank">LinkedIn</a>  <a href="mailto:contact@sohamsen.me" target="_blank">E-mail</a>

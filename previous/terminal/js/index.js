@@ -10,7 +10,7 @@ var links = new Map([
     ["Steam", "https://steamcommunity.com/id/one_random_ghost/"],
     ["Telegram", "https://t.me/NotRandomGhost"],
     ["Blog", "https://blog.sohamsen.me/"],
-    ["Old-Site", "https://sohamsen.me/nojs/"],
+    ["Main-Site", "https://sohamsen.me/"],
 ]);
 var cmd_help = new Map([
     ["help", "Command: help\nDisplay this help message."],
