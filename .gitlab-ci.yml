@@ -25,5 +25,6 @@ deploy:
   extends: .deploy_kubernetes
   variables:
     KUBERNETES_CONTEXT: GhostDev/sohamsen.me:personal-site
+    KUBERNETES_NAMESPACE: prod
   only:
     - master
