@@ -21,7 +21,7 @@ items:
     metadata:
       name: site-sohamsen-me
     spec:
-      replicas: 1
+      replicas: 2
       selector:
         matchLabels:
           app: site-sohamsen-me
@@ -30,6 +30,13 @@ items:
           labels:
             app: site-sohamsen-me
         spec:
+          topologySpreadConstraints:
+          - maxSkew: 1
+            topologyKey: kubernetes.io/hostname
+            whenUnsatisfiable: DoNotSchedule
+            labelSelector:
+              matchLabels:
+                app: site-sohamsen-me
           containers:
             - image: registry.sohamsen.me/ghostdev/sohamsen.me:latest
               name: site-sohamsen-me
