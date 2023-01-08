@@ -1,0 +1,29 @@
+stages:
+  - build
+  - release
+  - deploy
+
+include:
+  - project: 'infrastructure/ci-scripts'
+    file: 'build-docker-image.yml'
+  - project: 'infrastructure/ci-scripts'
+    file: 'release-docker-image.yml'
+  - project: 'infrastructure/ci-scripts'
+    file: 'deploy-kubernetes.yml'
+
+build:
+  extends: .build_image
+  only:
+    - master
+
+release:
+  extends: .release_image
+  only:
+    - master
+
+deploy:
+  extends: .deploy_kubernetes
+  variables:
+    KUBERNETES_CONTEXT: GhostDev/sohamsen.me:personal-site
+  only:
+    - master

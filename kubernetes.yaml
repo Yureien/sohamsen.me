@@ -1,0 +1,71 @@
+apiVersion: v1
+items:
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: site-sohamsen-me
+      labels:
+        app: site-sohamsen-me
+        service: site-sohamsen-me
+    spec:
+      ports:
+        - name: http
+          port: 8000
+          targetPort: 80
+      selector:
+        app: site-sohamsen-me
+    status:
+      loadBalancer: {}
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: site-sohamsen-me
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: site-sohamsen-me
+      template:
+        metadata:
+          labels:
+            app: site-sohamsen-me
+        spec:
+          containers:
+            - image: registry.sohamsen.me/ghostdev/sohamsen.me:latest
+              name: site-sohamsen-me
+              ports:
+                - containerPort: 80
+          restartPolicy: Always
+  - apiVersion: networking.istio.io/v1alpha3
+    kind: Gateway
+    metadata:
+      name: site-sohamsen-me-gateway
+    spec:
+      selector:
+        istio: ingressgateway
+      servers:
+      - port:
+          number: 80
+          name: http
+          protocol: HTTP
+        hosts:
+        - "sohamsen.me"
+        - "www.sohamsen.me"
+  - apiVersion: networking.istio.io/v1alpha3
+    kind: VirtualService
+    metadata:
+      name: site-sohamsen-me
+    spec:
+      hosts:
+      - "sohamsen.me"
+      - "www.sohamsen.me"
+      gateways:
+      - site-sohamsen-me-gateway
+      http:
+      - route:
+        - destination:
+            host: site-sohamsen-me
+            port:
+              number: 8000
+kind: List
+metadata: {}
