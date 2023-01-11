@@ -45,21 +45,6 @@ items:
                 - containerPort: 80
           restartPolicy: Always
   - apiVersion: networking.istio.io/v1alpha3
-    kind: Gateway
-    metadata:
-      name: site-sohamsen-me-gateway
-    spec:
-      selector:
-        istio: ingressgateway
-      servers:
-      - port:
-          number: 80
-          name: http
-          protocol: HTTP
-        hosts:
-        - "sohamsen.me"
-        - "www.sohamsen.me"
-  - apiVersion: networking.istio.io/v1alpha3
     kind: VirtualService
     metadata:
       name: site-sohamsen-me
@@ -68,7 +53,7 @@ items:
       - "sohamsen.me"
       - "www.sohamsen.me"
       gateways:
-      - site-sohamsen-me-gateway
+      - sohamsen-me-gateway
       http:
       - route:
         - destination:
