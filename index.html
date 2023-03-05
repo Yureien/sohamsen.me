@@ -132,7 +132,7 @@
         <h3>Current Life Status</h3>
         <ul>
             <li>I am an undergraduate student at the <a href="http://www.iitkgp.ac.in/">Indian Institute of Technology,
-                    Kharagpur</a>.</li>
+                    Kharagpur</a>. <span id="your-uni"></span></li>
             <li>There, I am a member of the <a href="https://kossiitkgp.org/">Kharagpur Open Source Society</a>.</li>
             <li>Right now, I am a part time software developer at <a href="https://founderblocks.io/">FounderBlocks</a>.
             </li>
@@ -147,7 +147,8 @@
         <ul>
             <li><a href="https://github.com/Yureien">GitHub: @Yureien</a></li>
             <li><a href="https://www.linkedin.com/in/sohamsendev/">LinkedIn: @SohamSenDev</a></li>
-            <li><a href="https://matrix.to/#/@ghost:backalley.club?via=backalley.club">Matrix: @ghost:backalley.club</a></li>
+            <li><a href="https://matrix.to/#/@ghost:backalley.club?via=backalley.club">Matrix: @ghost:backalley.club</a>
+            </li>
             <li><a href="https://t.me/Yureien">Telegram: @Yureien</a></li>
             <li>My <a href="resume.pdf">Curriculum Vitae</a> (Résumé for you American folks)</li>
             <li><a href="https://blog.sohamsen.me/">Blog</a></li>
@@ -223,6 +224,20 @@
                     + ` by <a href="${d.artists[0].external_urls.spotify}" class="link">${d.artists[0].name}</a>.`;
                 aboutMeListElem.append(listItem);
             });
+
+        // Add uni
+        fetch("https://uni.aadibajpai.workers.dev")
+            .then(async (resp) => {
+                if (resp.ok) {
+                    let txt = "Looks like you are from ";
+                    const uni = await resp.text();
+                    if (uni.toLowerCase().includes("kharagpur")) txt += "IIT Kharagpur too";
+                    else txt += uni.startsWith("University") ? `the ${uni}` : `${uni}`;
+                    txt += ", nice.";
+                    document.getElementById("your-uni").innerHTML += txt;
+                }
+            })
+            .catch(err => console.log(err));
     </script>
 </body>
 
