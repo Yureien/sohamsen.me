@@ -28,4 +28,4 @@ deploy:
   only:
     - master
   environment:
-    - prod
+    name: prod
