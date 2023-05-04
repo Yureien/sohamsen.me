@@ -27,3 +27,5 @@ deploy:
     KUBERNETES_NAMESPACE: prod
   only:
     - master
+  environment:
+    - prod
