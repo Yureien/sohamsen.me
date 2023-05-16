@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description"
         content="I am Soham Sen, yet another developer on the world wide web. Loves to code, hack and make stuff." />
 
@@ -14,7 +14,8 @@
             margin: 5% 20%;
             background: #f2f2f2;
             color: #444444;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Helvetica, Arial, sans-serif;
             font-size: 16px;
             line-height: 1.8;
             max-width: 80%;
@@ -112,33 +113,71 @@
                 padding: 0;
             }
         }
+
+        #top-spotify table {
+            width: 100%;
+        }
+
+        #top-spotify table td {
+            width: 33.33%;
+            text-align: center;
+            border: 1px solid #555;
+        }
+
+        #top-spotify table th {
+            border: 2px solid #000;
+        }
+
+        .dark-mode #top-spotify table td {
+            border: 1px solid #aaa;
+        }
+
+        .dark-mode #top-spotify table th {
+            border: 2px solid #fff;
+        }
     </style>
 </head>
 
 <body>
-
     <div class="section">
         <h1>Who's Soham?</h1>
         <ul id="about-me">
             <li>I am Soham Sen (if the URL was not clear enough).</li>
             <li>I like to code stuff, both for fun and profit.</li>
-            <li>I also like to play with servers, and deploy and automate stuff (what the cool kids call "devops"
-                nowadays).</li>
-            <li><a href="https://blog.sohamsen.me/">I scribble sometimes on the wall of the internet.</a></li>
+            <li>
+                I also like to play with servers, and deploy and automate stuff (what
+                the cool kids call "devops" nowadays).
+            </li>
+            <li>
+                <a href="https://blog.sohamsen.me/">I scribble sometimes on the wall of the internet.</a>
+            </li>
         </ul>
     </div>
 
     <div class="section">
         <h3>Current Life Status</h3>
         <ul>
-            <li>I am an undergraduate student at the <a href="http://www.iitkgp.ac.in/">Indian Institute of Technology,
-                    Kharagpur</a>. <span id="your-uni"></span></li>
-            <li>There, I am a member of the <a href="https://kossiitkgp.org/">Kharagpur Open Source Society</a>.</li>
-            <li>Right now, I am a part time software developer at <a href="https://founderblocks.io/">FounderBlocks</a>.
+            <li>
+                I am an undergraduate student at the
+                <a href="http://www.iitkgp.ac.in/">Indian Institute of Technology, Kharagpur</a>. <span
+                    id="your-uni"></span>
             </li>
-            <li>Also an incoming (summer 2023) intern at <a href="https://www.limechat.ai/">LimeChat</a>.</li>
-            <li>Future life goals include doing something with computers. Like a software developer. Or maybe a product
-                manager.</li>
+            <li>
+                There, I am a member of the
+                <a href="https://kossiitkgp.org/">Kharagpur Open Source Society</a>.
+            </li>
+            <li>
+                Right now, I am a part time software developer at
+                <a href="https://founderblocks.io/">FounderBlocks</a>.
+            </li>
+            <li>
+                Also an incoming (summer 2023) intern at
+                <a href="https://www.limechat.ai/">LimeChat</a>.
+            </li>
+            <li>
+                Future life goals include doing something with computers. Like a
+                software developer. Or maybe a product manager.
+            </li>
         </ul>
     </div>
 
@@ -146,35 +185,99 @@
         <h1>Can you give me some links to click?</h1>
         <ul>
             <li><a href="https://github.com/Yureien">GitHub: @Yureien</a></li>
-            <li><a href="https://www.linkedin.com/in/sohamsendev/">LinkedIn: @SohamSenDev</a></li>
-            <li><a href="https://matrix.to/#/@ghost:backalley.club?via=backalley.club">Matrix: @ghost:backalley.club</a>
+            <li>
+                <a href="https://www.linkedin.com/in/sohamsendev/">LinkedIn: @SohamSenDev</a>
+            </li>
+            <li>
+                <a href="https://matrix.to/#/@ghost:backalley.club?via=backalley.club">Matrix: @ghost:backalley.club</a>
             </li>
             <li><a href="https://t.me/Yureien">Telegram: @Yureien</a></li>
-            <li>My <a href="resume.pdf">Curriculum Vitae</a> (Résumé for you American folks)</li>
+            <li>
+                My <a href="resume.pdf">Curriculum Vitae</a> (Résumé for you American
+                folks)
+            </li>
             <li><a href="https://blog.sohamsen.me/">Blog</a></li>
-            <li><a href="https://open.spotify.com/user/33qturbwfor1ei5nqdtis0dop">Spotify</a></li>
-            <li>If you believe in the old ways, mail me at <a href="mailto:contact@sohamsen.me">contact@sohamsen.me</a>
+            <li>
+                <a href="https://open.spotify.com/user/33qturbwfor1ei5nqdtis0dop">Spotify</a>
+            </li>
+            <li>
+                If you believe in the old ways, mail me at
+                <a href="mailto:contact@sohamsen.me">contact@sohamsen.me</a>
             </li>
         </ul>
     </div>
 
-    <hr>
+    <hr />
+
+    <div id="top-spotify" style="display: none;">
+        <h1>No one asked for it, but here, judge my music tastes:</h1>
+        <small>Was bored and ended up creating this, checkout <a href="https://github.com/Yureien/SPlaying">SPlaying</a>
+            if you want it too! Data fetched in real-time from <a href="https://spotify.com/">Spotify</a>.</small>
+
+        <h3>What are Soham's top tracks?</h3>
+
+        <table id="top-tracks">
+            <thead>
+                <tr>
+                    <th>Long Term</th>
+                    <th>Medium Term</th>
+                    <th>Short Term</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <h3>Who are Soham's favorite artists?</h3>
+
+        <table id="top-artists">
+            <thead>
+                <tr>
+                    <th>Long Term</th>
+                    <th>Medium Term</th>
+                    <th>Short Term</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <h3>What are Soham's favorite genres?</h3>
+
+        <table id="top-genres">
+            <thead>
+                <tr>
+                    <th>Long Term</th>
+                    <th>Medium Term</th>
+                    <th>Short Term</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <hr />
+    </div>
 
     <div class="section">
         <h3>Previous Site Iterations</h3>
-        I sometimes randomly nuke my website and create a new version from scratch.
-        <br>
+        I sometimes randomly nuke my website and create a new version from
+        scratch.
+        <br />
         Here are some of the previous iterations:
         <ol>
             <li>A Mystery</li>
             <li><a href="/previous/terminal/">The Terminal</a></li>
-            <li><a href="/previous/css-minimal/">Lesser Minimalism (with CSS!)</a></li>
+            <li>
+                <a href="/previous/css-minimal/">Lesser Minimalism (with CSS!)</a>
+            </li>
         </ol>
     </div>
 
     <div class="footer">
-        I like minimalism nowadays.<br>
-        Site Version: 4.0 | <a href="https://github.com/Yureien/sohamsen.me">Source Code</a>
+        I like minimalism nowadays.<br />
+        Site Version: 4.0 |
+        <a href="https://github.com/Yureien/sohamsen.me">Source Code</a>
     </div>
 
     <script>
@@ -191,7 +294,10 @@
             document.body.classList.remove("dark-mode");
             themeToggle.innerText = "Dark";
         } else {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            if (
+                window.matchMedia &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+            ) {
                 document.body.classList.add("dark-mode");
                 themeToggle.innerText = "Light";
             } else {
@@ -202,28 +308,126 @@
 
         themeToggle.onclick = (event) => {
             event.preventDefault();
-            document.body.classList.toggle('dark-mode');
-            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
-            if (document.body.classList.contains('dark-mode')) themeToggle.innerText = "Light";
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem(
+                "theme",
+                document.body.classList.contains("dark-mode") ? "dark" : "light"
+            );
+            if (document.body.classList.contains("dark-mode"))
+                themeToggle.innerText = "Light";
             else themeToggle.innerText = "Dark";
         };
-        if (document.body.classList.contains('dark-mode')) themeToggle.innerText = "Light";
+        if (document.body.classList.contains("dark-mode"))
+            themeToggle.innerText = "Light";
         else themeToggle.innerText = "Dark";
 
         // Add currently playing song on Spotify to the site
         const aboutMeListElem = document.getElementById("about-me");
-        fetch("https://splaying.sohamsen.workers.dev/np/?uid=f4d46cc927d3cd6a203359693f0439d1ceab6da7ae884cb656a8589d65c91aea")
-            .then(resp => resp.json())
-            .then(data => {
+        fetch(
+            "https://splaying.sohamsen.workers.dev/api/nowplaying/8b5fda7c4d53bf85038500222e608423152dba132ebbe799cdc7fbfe0f2e7966"
+        )
+            .then((resp) => resp.json())
+            .then((data) => {
                 if (data.spotify_running !== true || data.error !== undefined) {
                     return;
-                };
+                }
                 const d = data.item;
+                const artistsHtmlList = d.artists.map(
+                    (artist) =>
+                        `<a href="${artist.link}" class="link">${artist.name}</a>`
+                );
+                let artistsHtml = "";
+                if (artistsHtmlList.length === 1) {
+                    artistsHtml = artistsHtmlList[0];
+                } else {
+                    artistsHtml = artistsHtmlList.slice(0, -1).join(", ");
+                    artistsHtml += ` and ${artistsHtmlList.slice(-1)}`;
+                }
                 const listItem = document.createElement("li");
-                listItem.innerHTML = `I am currently listening to <a href="${d.external_urls.spotify}" class="link">${d.name}</a>`
-                    + ` by <a href="${d.artists[0].external_urls.spotify}" class="link">${d.artists[0].name}</a>.`;
+                listItem.innerHTML = `I am currently listening to <a href="${d.link}" class="link">${d.name}</a>`
+                    + ` by ${artistsHtml}.`;
                 aboutMeListElem.append(listItem);
             });
+
+        // Add my top spotify artists and tracks
+        const topSpotifyContainer = document.querySelector("#top-spotify");
+        const topSpotifyArtistsTable = topSpotifyContainer.querySelector(
+            "#top-artists tbody"
+        );
+        const topSpotifyTracksTable = topSpotifyContainer.querySelector(
+            "#top-tracks tbody"
+        );
+        const topSpotifyGenresTable = topSpotifyContainer.querySelector(
+            "#top-genres tbody"
+        );
+        const genres = [new Set(), new Set(), new Set()];
+
+        const addByTimeRange = async (type, time_range) => {
+            await fetch(
+                `https://splaying.sohamsen.workers.dev/api/top/8b5fda7c4d53bf85038500222e608423152dba132ebbe799cdc7fbfe0f2e7966?type=${type}&limit=5&time_range=${time_range}`
+            )
+                .then((resp) => resp.json())
+                .then((data) => {
+                    const tdNum = ["long_term", "medium_term", "short_term"].indexOf(time_range);
+                    if (data.error !== undefined) {
+                        return;
+                    }
+
+                    if (type === "artists") {
+                        data.items.forEach((item) => {
+                            if (!item.genres) return;
+                            item.genres.forEach((genre) => {
+                                genres[tdNum].add(genre);
+                            });
+                        });
+                    }
+                    topSpotifyGenresTable.children[0].children[tdNum].innerHTML = [...genres[tdNum]].join(", ");
+
+                    data.items.map(
+                        (item) =>
+                            `<a href="${item.link}" class="link">${item.name}</a>`
+                    ).forEach((element, index) => {
+                        let row;
+                        if (type === "artists")
+                            row = topSpotifyArtistsTable.children[index];
+                        else if (type === "tracks")
+                            row = topSpotifyTracksTable.children[index];
+                        row.children[tdNum].innerHTML = element;
+                    });
+                });
+        };
+
+        (async () => {
+            for (let i = 0; i < 5; i++) {
+                const artistRow = document.createElement("tr");
+                for (let j = 0; j < 3; j++) {
+                    const td = document.createElement("td");
+                    artistRow.append(td);
+                }
+                const trackRow = document.createElement("tr");
+                for (let j = 0; j < 3; j++) {
+                    const td = document.createElement("td");
+                    trackRow.append(td);
+                }
+                topSpotifyArtistsTable.append(artistRow);
+                topSpotifyTracksTable.append(trackRow);
+            }
+            const genreRow = document.createElement("tr");
+            for (let j = 0; j < 3; j++) {
+                const td = document.createElement("td");
+                genreRow.append(td);
+            }
+            topSpotifyGenresTable.append(genreRow);
+
+            await addByTimeRange("tracks", "long_term");
+            await addByTimeRange("artists", "long_term");
+            addByTimeRange("tracks", "medium_term");
+            addByTimeRange("artists", "medium_term");
+            addByTimeRange("tracks", "short_term");
+            addByTimeRange("artists", "short_term");
+
+            topSpotifyContainer.style.display = "block";
+        })();
 
         // Add uni
         fetch("https://uni.aadibajpai.workers.dev")
@@ -231,13 +435,14 @@
                 if (resp.ok) {
                     let txt = "Looks like you are from ";
                     const uni = await resp.text();
-                    if (uni.toLowerCase().includes("kharagpur")) txt += "IIT Kharagpur too";
+                    if (uni.toLowerCase().includes("kharagpur"))
+                        txt += "IIT Kharagpur too";
                     else txt += uni.startsWith("University") ? `the ${uni}` : `${uni}`;
                     txt += ", nice.";
                     document.getElementById("your-uni").innerHTML += txt;
                 }
             })
-            .catch(err => console.log(err));
+            .catch((err) => console.log(err));
     </script>
 </body>
 
