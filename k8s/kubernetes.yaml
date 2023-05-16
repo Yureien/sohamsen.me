@@ -31,15 +31,15 @@ items:
             app: site-sohamsen-me
         spec:
           topologySpreadConstraints:
-          - maxSkew: 1
-            topologyKey: kubernetes.io/hostname
-            whenUnsatisfiable: DoNotSchedule
-            labelSelector:
-              matchLabels:
-                app: site-sohamsen-me
+            - maxSkew: 1
+              topologyKey: kubernetes.io/hostname
+              whenUnsatisfiable: DoNotSchedule
+              labelSelector:
+                matchLabels:
+                  app: site-sohamsen-me
           containers:
             - image: registry.sohamsen.me/ghostdev/sohamsen.me:latest
-              imagePullPolicy: Always
+              imagePullPolicy: IfNotPresent
               name: site-sohamsen-me
               ports:
                 - containerPort: 80
@@ -50,15 +50,15 @@ items:
       name: site-sohamsen-me
     spec:
       hosts:
-      - "sohamsen.me"
-      - "www.sohamsen.me"
+        - "sohamsen.me"
+        - "www.sohamsen.me"
       gateways:
-      - sohamsen-me-gateway
+        - sohamsen-me-gateway
       http:
-      - route:
-        - destination:
-            host: site-sohamsen-me
-            port:
-              number: 8000
+        - route:
+            - destination:
+                host: site-sohamsen-me
+                port:
+                  number: 8000
 kind: List
 metadata: {}

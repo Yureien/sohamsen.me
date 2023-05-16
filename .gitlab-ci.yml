@@ -9,7 +9,7 @@ include:
   - project: 'infrastructure/ci-scripts'
     file: 'release-docker-image.yml'
   - project: 'infrastructure/ci-scripts'
-    file: 'deploy-kubernetes.yml'
+    file: 'deploy-kustomize.yml'
 
 build:
   extends: .build_image
@@ -22,9 +22,9 @@ release:
     - master
 
 deploy:
-  extends: .deploy_kubernetes
+  extends: .deploy_kustomize
   variables:
-    KUBERNETES_NAMESPACE: prod
+    KUSTOMIZE_OVERLAY: 'k8s'
   only:
     - master
   environment:
