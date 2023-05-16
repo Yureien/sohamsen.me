@@ -24,7 +24,8 @@ release:
 deploy:
   extends: .deploy_kustomize
   variables:
-    KUSTOMIZE_OVERLAY: 'k8s'
+    KUSTOMIZE_OVERLAY: k8s
+    KUBERNETES_NAMESPACE: prod
   only:
     - master
   environment:
